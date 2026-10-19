@@ -1,0 +1,18 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="110" fill="#0b1735"/>
+  <rect x="72" y="72" width="368" height="368" rx="78" fill="#142850"/>
+  <rect x="125" y="105" width="262" height="300" rx="25" fill="#ffffff"/>
+  <rect x="125" y="105" width="262" height="78" rx="25" fill="#2563eb"/>
+  <rect x="125" y="155" width="262" height="28" fill="#2563eb"/>
+  <path d="M170 92 V130 M342 92 V130" stroke="#ffffff" stroke-width="15" stroke-linecap="round"/>
+  <g fill="#2563eb">
+    <rect x="160" y="218" width="43" height="43" rx="10"/>
+    <rect x="235" y="218" width="43" height="43" rx="10"/>
+    <rect x="310" y="218" width="43" height="43" rx="10"/>
+    <rect x="160" y="290" width="43" height="43" rx="10"/>
+    <rect x="235" y="290" width="43" height="43" rx="10"/>
+  </g>
+  <path d="M307 306 L324 323 L359 283" fill="none" stroke="#16a34a" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="256" y="377" font-size="37" font-family="Arial,sans-serif" font-weight="bold" fill="#0b1735" text-anchor="middle">LesKu</text>
+</svg>
