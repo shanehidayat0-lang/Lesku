@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101d35">
+  <meta name="description" content="Jadwal les pribadi dengan LesKu">
+  <title>LesKu - Jadwal Les</title>
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <div class="logo">📚</div>
+      <div>
+        <h1>LesKu</h1>
+        <p>Jadwal les pribadi kamu</p>
+      </div>
+    </header>
+
+    <div id="notice" class="notice">
+      🔔 Pengingat jadwal les kamu
+    </div>
+
+    <section class="stats">
+      <div class="stat">
+        <span>Mendatang</span>
+        <strong id="upcoming">0</strong>
+      </div>
+      <div class="stat">
+        <span>Ikut les</span>
+        <strong id="attending">0</strong>
+      </div>
+      <div class="stat">
+        <span>Absen</span>
+        <strong id="absent">0</strong>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>＋ Tambah jadwal</h2>
+      <form id="lessonForm">
+        <label for="name">Nama les</label>
+        <input id="name" required placeholder="Contoh: Matematika">
+
+        <label for="place">Tempat atau guru</label>
+        <input id="place" placeholder="Contoh: Bimbel">
+
+        <label for="date">Tanggal les</label>
+        <input id="date" type="date" required>
+
+        <label for="time">Jam les</label>
+        <input id="time" type="time" value="16:00" required>
+
+        <label for="notes">Catatan</label>
+        <textarea id="notes" rows="2"
+          placeholder="PR atau buku yang harus dibawa"></textarea>
+
+        <button class="primary" type="submit">Simpan jadwal</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>🗓️ Jadwal les</h2>
+      <div class="tabs">
+        <button type="button" data-filter="upcoming">Mendatang</button>
+        <button type="button" class="secondary" data-filter="all">Semua</button>
+        <button type="button" class="secondary" data-filter="history">Riwayat</button>
+      </div>
+      <div id="lessonList"></div>
+    </section>
+
+    <section class="panel">
+      <h2>📲 Aplikasi dan notifikasi</h2>
+      <p class="muted">
+        Pasang LesKu melalui menu browser jika pilihan instalasi tersedia.
+      </p>
+      <button id="installButton" class="secondary" type="button" hidden>
+        Instal LesKu
+      </button>
+      <button id="enableNotifications" type="button">
+        Aktifkan dan tes notifikasi
+      </button>
+      <p id="notificationStatus" class="muted">
+        Status notifikasi belum diperiksa.
+      </p>
+    </section>
+
+    <section class="panel">
+      <h2>💾 Cadangan data</h2>
+      <button id="exportData" type="button">Ekspor data</button>
+      <button id="importButton" class="secondary" type="button">
+        Impor data
+      </button>
+      <input id="importFile" type="file" accept=".json,application/json" hidden>
+      <p class="muted">
+        Data disimpan pada browser perangkat ini. Ekspor data untuk membuat cadangan.
+      </p>
+    </section>
+
+    <footer>LesKu · Personal study planner</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
